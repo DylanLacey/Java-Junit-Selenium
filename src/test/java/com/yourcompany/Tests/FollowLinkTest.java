@@ -8,9 +8,8 @@ import static org.junit.Assert.*;
 
 public class FollowLinkTest extends TestBase {
 
-    public FollowLinkTest(String os,
-                          String version, String browser, String deviceName, String deviceOrientation) {
-            super(os, version, browser, deviceName, deviceOrientation);
+    public FollowLinkTest(){
+        super();
     }
 
     /**
