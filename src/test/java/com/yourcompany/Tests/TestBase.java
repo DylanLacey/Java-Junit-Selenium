@@ -51,7 +51,8 @@ public class TestBase implements SauceOnDemandSessionIdProvider {
     @Rule
     public TestName name = new TestName() {
         public String getMethodName() {
-            return String.format("%s", super.getMethodName());
+            // return String.format("%s", super.getMethodName());
+            return "ATEST";
         }
     };
 
