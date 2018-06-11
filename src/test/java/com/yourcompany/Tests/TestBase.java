@@ -84,6 +84,7 @@ public class TestBase {
         char LF  = (char) 0x0A; 
         
         System.out.print("SauceOnDemandSessionID=" + this.sessionId + " job-name=Dave:Mave" + CR + LF);
+        System.out.print("SauceOnDemandSessionID=1e521571c29d423aa85447917afe66b6 job-name=CrossBrowserErrorPageTests:UpdatePageExists ");
         driver.quit();
     }
 
