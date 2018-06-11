@@ -83,7 +83,7 @@ public class TestBase {
         char CR  = (char) 0x0D;
         char LF  = (char) 0x0A; 
         
-        System.out.println("SauceOnDemandSessionID=" + this.sessionId + " job-name=Dave:Mave  " + CR + LF);
+        System.out.print("SauceOnDemandSessionID=" + this.sessionId + " job-name=Dave:Mave  " + CR + LF);
         driver.quit();
     }
 
