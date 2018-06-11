@@ -80,7 +80,7 @@ public class TestBase {
 
     @After
     public void tearDown() throws Exception {
-        System.out.println("SauceOnDemandSessionID=" + this.sessionId + " job-name=Dave");
+        System.out.println("SauceOnDemandSessionID=" + this.sessionId + " job-name=Dave:Mave");
         driver.quit();
     }
 
