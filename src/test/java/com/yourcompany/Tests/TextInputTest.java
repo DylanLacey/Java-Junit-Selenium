@@ -31,7 +31,25 @@ public class TextInputTest extends TestBase {
 
         String sessionID = ((RemoteWebDriver) page.driver).getSessionId().toString();
 
-        System.out.println("SauceOnDemandSessionID=" + sessionID + "job-name=verifyCommentInputTest");
+        System.out.println("SauceOnDemandSessionID=" + sessionID + "job-name=verifyCommentInputTest[0]");
+        assertThat(page.getSubmittedCommentText(), containsString(commentInputText));
+    }
+
+    /**
+     * Runs a simple test verifying if the comment input is functional.
+     * @throws InvalidElementStateException
+     */
+    @Test
+    public void verifyCommentInputTestAgain() throws InvalidElementStateException {
+        String commentInputText = UUID.randomUUID().toString();
+
+        GuineaPigPage page = GuineaPigPage.visitPage(driver);
+        page.visitPage();
+        page.submitComment(commentInputText);
+
+        String sessionID = ((RemoteWebDriver) page.driver).getSessionId().toString();
+
+        System.out.println("SauceOnDemandSessionID=" + sessionID + "job-name=verifyCommentInputTest[0]");
         assertThat(page.getSubmittedCommentText(), containsString(commentInputText));
     }
 }
