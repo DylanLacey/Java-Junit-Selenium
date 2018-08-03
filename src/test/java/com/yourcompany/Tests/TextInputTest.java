@@ -31,8 +31,8 @@ public class TextInputTest extends TestBase {
 
         String sessionID = ((RemoteWebDriver) page.driver).getSessionId().toString();
 
-        System.out.println("SauceOnDemandSessionID=" + sessionID + "job-name=verifyCommentInputTest[0]");
-        System.out.println("SauceOnDemandSessionID=" + "https://saucelabs.com/beta/tests/c582f29b2dbd4b859f2d625bf992967f"+ " job-name=verifyCommentInputTest");
+        // System.out.println("SauceOnDemandSessionID=" + sessionID + "job-name=verifyCommentInputTest[0]");
+        System.out.println("SauceOnDemandSessionID=" + "c582f29b2dbd4b859f2d625bf992967f"+ " job-name=verifyCommentInputTest");
         assertThat(page.getSubmittedCommentText(), containsString(commentInputText));
     }
 
