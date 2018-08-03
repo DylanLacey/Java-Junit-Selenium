@@ -61,4 +61,8 @@ public class GuineaPigPage {
         return this.driver.getTitle() == title;
     }
 
+    public WebDriver driver(){
+        return this.driver;
+    }
+
 }

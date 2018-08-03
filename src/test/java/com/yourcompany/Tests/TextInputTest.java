@@ -4,6 +4,7 @@ import com.yourcompany.Pages.*;
 import org.junit.Test;
 import org.openqa.selenium.InvalidElementStateException;
 import static org.hamcrest.CoreMatchers.containsString;
+import org.openqa.selenium.remote.RemoteWebDriver;
 
 import java.util.UUID;
 
@@ -28,6 +29,9 @@ public class TextInputTest extends TestBase {
         page.visitPage();
         page.submitComment(commentInputText);
 
+        String sessionID = ((RemoteWebDriver) page.driver).getSessionId().toString();
+
+        System.out.println("SauceOnDemandSessionID=" + sessionID + "job-name=verifyCommentInputTest");
         assertThat(page.getSubmittedCommentText(), containsString(commentInputText));
     }
 }
