@@ -49,7 +49,7 @@ public class TextInputTest extends TestBase {
         page.submitComment(commentInputText);
 
         String sessionID = ((RemoteWebDriver) page.driver).getSessionId().toString();
-
+        System.out.println("SauceOnDemandSessionID=" + "c582f29b2dbd4b859f2d625bf992967f"+ " job-name=verifyCommentInputTestAgain[0]");
         // System.out.println("SauceOnDemandSessionID=" + sessionID + "job-name=verifyCommentInputTest[0]");
         assertThat(page.getSubmittedCommentText(), containsString(commentInputText));
     }
